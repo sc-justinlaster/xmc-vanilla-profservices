@@ -21,21 +21,14 @@ const AeromotionGridDefaultComponent = (props: AeromotionGridProps): JSX.Element
 );
 
 export const Default = (props: AeromotionGridProps): JSX.Element => {
-  //const id = props.params.RenderingIdentifier;
-  if (props.fields) {
-    return (
-      <section key={props.params.RenderingIdentifier} className={`grid ${props.params.styles}`}>
-        <Placeholder
-          name={`cell-${props.params.DynamicPlaceholderId}`}
-          rendering={props.rendering}
-        />
-        {props.fields.BottomRule.value && (
-          <div className="cell -12-md bottom-rule">
-            <hr />
-          </div>
-        )}
-      </section>
-    );
-  }
+  return (
+    <section key={props.params.RenderingIdentifier} className={`grid ${props.params.styles}`}>
+      <Placeholder
+        name={`aeromotiongrid--${props.params.DynamicPlaceholderId}`}
+        rendering={props.rendering}
+      />
+    </section>
+  );
+
   return <AeromotionGridDefaultComponent {...props} />;
 };

@@ -26,7 +26,7 @@ export const Default = (props: AeromotionCellProps): JSX.Element => {
     return (
       <div key={props.params.RenderingIdentifier} className={`cell ${props.params.styles}`}>
         <Placeholder
-          name={`cell-content-${props.params.DynamicPlaceholderId}`}
+          name={`aeromotioncell-${props.params.DynamicPlaceholderId}`}
           rendering={props.rendering}
         />
       </div>
