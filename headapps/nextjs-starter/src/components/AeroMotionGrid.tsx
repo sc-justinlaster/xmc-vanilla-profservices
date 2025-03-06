@@ -26,7 +26,8 @@ export const Default = (props: AeromotionGridProps): JSX.Element => {
     return (
       <section key={props.params.RenderingIdentifier} className={`grid ${props.params.styles}`}>
         <Placeholder
-          name={`cell-${props.params.DynamicPlaceholderId}`}
+          render={{preload: true}}
+          name={`aeromotiongrid--${props.params.DynamicPlaceholderId}`}
           rendering={props.rendering}
         />
         {props.fields.BottomRule.value && (
